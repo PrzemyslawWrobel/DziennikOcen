@@ -37,7 +37,15 @@ namespace GradeBook
                 }
                 if (result)
                 {
-                    diary.AddRating(rating);
+                    if(rating >= 0 && rating <= 10)
+                    {
+                        diary.AddRating(rating);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Niepoprawna liczba. Podaj liczbę z zakresu 0,0 - 10,0");
+                    }
+                    
                 }
             }
             Console.WriteLine("średnia twoich ocen to :" + diary.CalculateAverage());
