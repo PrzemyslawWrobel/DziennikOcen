@@ -35,7 +35,10 @@ namespace GradeBook
                 {
                     break;
                 }
-                diary.AddRating(rating);
+                if (result)
+                {
+                    diary.AddRating(rating);
+                }
             }
             Console.WriteLine("średnia twoich ocen to :" + diary.CalculateAverage());
             Console.WriteLine("Najwyższa ocena to :" + diary.GiveMaxRating());
