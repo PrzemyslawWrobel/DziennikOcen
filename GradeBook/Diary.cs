@@ -7,9 +7,15 @@ namespace GradeBook
 {
     class Diary
     {
+        /// <summary>
+        /// konstruktor ma taką samą nazwę jak nazwa klasy, może być ich wiele ale muszą się różnić przekazanymi argumentami lub typami
+        /// </summary>
+        public Diary()
+        {
+            ratings = new List<float>();
+        }
         //stan (zmienne - pola)
-        List<float> ratings = new List<float>();
-
+        List<float> ratings;
 
         //zachowania
 
