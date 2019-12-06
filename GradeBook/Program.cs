@@ -11,22 +11,11 @@ namespace GradeBook
             //Diary - to jest typ listy szablon do tworzenia nowych obiektów
             //diary - to jest nazwa tworzonej listy
             Diary diary = new Diary();
-            //diary.AddRating(5.0f);
-            //diary.AddRating(8.5f);
-
-            //diary.AddRating(4.5f);
-
-            //diary.AddRating(3.7f);
-            //diary.AddRating(1.5f);
-            //diary.AddRating(5.9f);
-
-            //float avg =  diary.CalculateAverage();
-            //float max = diary.GiveMaxRating();
-            //float min = diary.GiveMinRatin();
-
+            
+            //pętla do pobierania ocen wpisywanych w konsoli przez użytkownika
             for (; ; )
             {
-                Console.WriteLine("Podaj ocenę z zakresu od 1 do 10");
+                Console.WriteLine("Podaj ocenę z zakresu od 1 do 10. Liczba 11 kończy działanie programu.");
                 float rating;
                 bool result = float.TryParse(Console.ReadLine(), out rating);
 
