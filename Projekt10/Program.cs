@@ -10,7 +10,7 @@ namespace Projekt10
             diary.AddRating(3);
             diary.AddRating(5);
 
-
+            ///vchfdh
             diary = new Diary();
             diary.AddRating(8);
         }
