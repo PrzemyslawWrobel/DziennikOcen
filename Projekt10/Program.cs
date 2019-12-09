@@ -9,10 +9,15 @@ namespace Projekt10
             Diary diary = new Diary();
             diary.AddRating(3);
             diary.AddRating(5);
+            diary.AddRating(3.3f);
+            diary.AddRating(5.9f);
 
-         
-            diary = new Diary();
-            diary.AddRating(8);
+            DiaryStatistics stats = diary.ComputeStatistics();
+            //var avg = stats.Av
+            Console.WriteLine("średnia ocena: " + stats.AverageGrade);
+            Console.WriteLine("MAX ocena: "  + stats.MaxGrade);
+            Console.WriteLine("Min ocena: " + stats.MinGrade);
+
         }
     }
 }

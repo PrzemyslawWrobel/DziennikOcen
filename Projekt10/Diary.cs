@@ -29,39 +29,60 @@ namespace Projekt10
         }
 
         /// <summary>
-        /// Oblicza średnią z ocen z listy
+        /// 
         /// </summary>
         /// <returns></returns>
-        public float CalculateAverage()
+        internal DiaryStatistics ComputeStatistics()
         {
-            float sum = 0;
-            float avg = 0;
+            DiaryStatistics stats = new DiaryStatistics();
+            float sum = 0f;
             foreach (var rating in ratings)
             {
                 sum += rating;
             }
+            stats.AverageGrade = sum / ratings.Count();
+            stats.MaxGrade = ratings.Max();
+            stats.MinGrade = ratings.Min();
 
-            avg = sum / ratings.Count();
-            return avg;
+            return stats;
         }
 
-        /// <summary>
-        /// Metoda zwraca najwyższą ocenę z listy
-        /// </summary>
-        /// <returns></returns>
-        public float GiveMaxRating()
-        {
+        ///// <summary>
+        ///// Oblicza średnią z ocen z listy
+        ///// </summary>
+        ///// <returns></returns>
+        //public float CalculateAverage()
+        //{
+        //    float sum = 0;
+        //    float avg = 0;
+        //    foreach (var rating in ratings)
+        //    {
+        //        sum += rating;
+        //    }
 
-            return ratings.Max();
-        }
+        //    avg = sum / ratings.Count();
+        //    return avg;
+        //}
 
-        /// <summary>
-        /// Metoda zwraca najniższą ocenę z listy
-        /// </summary>
-        /// <returns></returns>
-        public float GiveMinRatin()
-        {
-            return ratings.Min();
-        }
+        ///// <summary>
+        ///// Metoda zwraca najwyższą ocenę z listy
+        ///// </summary>
+        ///// <returns></returns>
+        //public float GiveMaxRating()
+        //{
+
+        //    return ratings.Max();
+        //}
+
+        ///// <summary>
+        ///// Metoda zwraca najniższą ocenę z listy
+        ///// </summary>
+        ///// <returns></returns>
+        //public float GiveMinRatin()
+        //{
+        //    return ratings.Min();
+        //}
+
+
     }
 }
