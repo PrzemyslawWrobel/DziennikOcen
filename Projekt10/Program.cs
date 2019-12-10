@@ -8,11 +8,11 @@ namespace Projekt10
         {
 
 
-            //Diary diary = new Diary();
-            //diary.AddRating(3);
-            //diary.AddRating(5);
-            //diary.AddRating(3.3f);
-            //diary.AddRating(5.9f);
+            Diary diary = new Diary();
+            diary.AddRating(3);
+            diary.AddRating(5);
+            diary.AddRating(3.3f);
+            diary.AddRating(5.9f);
 
             //Console.WriteLine(Diary.MaxGrade);
             //Diary diary1 = new Diary();
@@ -34,6 +34,13 @@ namespace Projekt10
              d1 = new Diary();
             d1.Name = "Dziennik Marcina";
             Console.WriteLine(d2.Name);
+
+            int x1 = 4;
+            int x2 = x1;
+            x1 = 100;
+            Console.WriteLine(x2);
+
+
         }
     }
 }
