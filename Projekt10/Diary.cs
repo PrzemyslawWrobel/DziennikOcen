@@ -5,6 +5,7 @@ using System.Text;
 
 namespace Projekt10
 {
+    //odc 12 hermetyzacja
     class Diary
     {
         /// <summary>
