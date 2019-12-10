@@ -16,7 +16,10 @@ namespace Projekt10
             ratings = new List<float>();
         }
         //stan (zmienne - pola)
-        List<float> ratings;
+        private List<float> ratings;
+
+        public static float MinGrade = 0;
+        public static float MaxGrade = 0;
 
         //zachowania
 
