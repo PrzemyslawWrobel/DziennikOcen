@@ -4,30 +4,35 @@ namespace Projekt10
 {
     class Program
     {
-        static void GiveName(Diary diary)
+        static void GiveName(ref Diary diary)
         {
-            diary.Name = "dziennik Babuni"; 
+            diary = new Diary();
+            diary.Name = "Nowy Dziennik Babuni";
+
+           
         }
 
-        static void IncrementNumber(int number)
+        static void IncrementNumber(out int number)
         {
-            number += 1;
+            number = 42;
+            Console.WriteLine(number);
         }
         static void Main(string[] args)
         {
             Diary d1 = new Diary();
             Diary d2 = d1;
 
-            GiveName(d1);
+            GiveName(ref d2);
             // d1 = new Diary();
             //d1.Name = "Dziennik Marcina";
             Console.WriteLine(d2.Name);
 
             int x1 = 4;
-            //int x2 = x1;
-            IncrementNumber(x1);
-            x1 = 100;
+           // int x2 = x1;
+            IncrementNumber(out x1);
+          
             Console.WriteLine(x1);
+          
 
             //Diary diary = new Diary();
             //diary.AddRating(3);
@@ -53,7 +58,7 @@ namespace Projekt10
 
 
 
-
+            Console.ReadLine();
         }
     }
 }
