@@ -12,10 +12,10 @@ namespace Projekt10
            
         }
 
-        static void IncrementNumber(out int number)
+        static int IncrementNumber( int number)
         {
-            number = 42;
-            Console.WriteLine(number);
+            number = number + 42;
+            return number;
         }
         static void Main(string[] args)
         {
@@ -27,12 +27,18 @@ namespace Projekt10
             //d1.Name = "Dziennik Marcina";
             Console.WriteLine(d2.Name);
 
-            int x1 = 4;
-           // int x2 = x1;
-            IncrementNumber(out x1);
-          
+            int x1 = 6;
             Console.WriteLine(x1);
+            int x2 ;
+            x2= IncrementNumber(x1);
           
+            Console.WriteLine(x2);
+            string name1 = "Marcin";
+            string name2 = "marcin";
+            bool areEqual = name1.Equals(name2, StringComparison.CurrentCultureIgnoreCase);
+            Console.WriteLine(areEqual);
+
+
 
             //Diary diary = new Diary();
             //diary.AddRating(3);
