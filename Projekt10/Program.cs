@@ -19,25 +19,11 @@ namespace Projekt10
         }
         static void Main(string[] args)
         {
-            Diary d1 = new Diary();
-            Diary d2 = d1;
+            // PassyByValueAnnRef();
 
-            GiveName(ref d2);
-            // d1 = new Diary();
-            //d1.Name = "Dziennik Marcina";
-            Console.WriteLine(d2.Name);
-
-            int x1 = 6;
-            Console.WriteLine(x1);
-            int x2 ;
-            x2= IncrementNumber(x1);
-          
-            Console.WriteLine(x2);
-            string name1 = "Marcin";
-            string name2 = "marcin";
-            bool areEqual = name1.Equals(name2, StringComparison.CurrentCultureIgnoreCase);
-            Console.WriteLine(areEqual);
-
+            Immutable();
+            EqualStrings();
+            AddDaysToDate();
 
 
             //Diary diary = new Diary();
@@ -65,6 +51,47 @@ namespace Projekt10
 
 
             Console.ReadLine();
+        }
+
+        private static void AddDaysToDate()
+        {
+            DateTime date = new DateTime(2020, 2,26);
+            DateTime newDate = date.AddHours(45);
+            Console.WriteLine(newDate);
+        }
+
+        private static void EqualStrings()
+        {
+            string name1 = "Marcin";
+            string name2 = "marcin";
+            bool areEqual = name1.Equals(name2, StringComparison.CurrentCultureIgnoreCase);
+            Console.WriteLine(areEqual);
+            
+        }
+
+        private static void Immutable()
+        {
+            string name = " Marcin ";
+            string newName = name.Trim();
+            Console.WriteLine(newName);
+        }
+
+        private static void PassyByValueAnnRef()
+        {
+            Diary d1 = new Diary();
+            Diary d2 = d1;
+
+            GiveName(ref d2);
+            // d1 = new Diary();
+            //d1.Name = "Dziennik Marcina";
+            Console.WriteLine(d2.Name);
+
+            int x1 = 6;
+            Console.WriteLine(x1);
+            int x2;
+            x2 = IncrementNumber(x1);
+
+            Console.WriteLine(x2);
         }
     }
 }
