@@ -19,11 +19,12 @@ namespace Projekt10
         }
         static void Main(string[] args)
         {
+            DziałaniaNaTablicach();
             // PassyByValueAnnRef();
 
-            Immutable();
-            EqualStrings();
-            AddDaysToDate();
+            //Immutable();
+            //EqualStrings();
+            //AddDaysToDate();
 
 
             //Diary diary = new Diary();
@@ -51,6 +52,39 @@ namespace Projekt10
 
 
             Console.ReadLine();
+        }
+
+        private static void DziałaniaNaTablicach()
+        {
+            
+            int[] scores = new int[5];
+
+            AddRatings(scores);
+
+
+            int totalscore = 0;
+
+            foreach (var score in scores)
+            {
+                Console.WriteLine(score);
+                totalscore += score;
+            }
+
+            //double average = ;
+           Console.WriteLine(totalscore);
+        }
+
+        private static void AddRatings(int[] scores)
+        {
+            if (scores.Length >= 4)
+            {
+                scores[0] = 4;
+                scores[1] = 2;
+                scores[2] = 3;
+                scores[3] = 5;
+                scores[4] = 1;
+            }
+            //scores[5] = 1;
         }
 
         private static void AddDaysToDate()

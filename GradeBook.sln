@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GradeBook", "GradeBook\Grad
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Construktors", "Construktors\Construktors.csproj", "{0792903E-062E-4488-86CC-FA07D083709B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projekt10", "Projekt10\Projekt10.csproj", "{E97A2FE3-4D8B-48F7-9F24-7BF1265C27DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Projekt10", "Projekt10\Projekt10.csproj", "{E97A2FE3-4D8B-48F7-9F24-7BF1265C27DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
