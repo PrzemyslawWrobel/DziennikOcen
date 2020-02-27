@@ -19,7 +19,7 @@ namespace Projekt10
         }
         static void Main(string[] args)
         {
-            DziałaniaNaTablicach();
+            //DziałaniaNaTablicach();
             // PassyByValueAnnRef();
 
             //Immutable();
@@ -27,31 +27,42 @@ namespace Projekt10
             //AddDaysToDate();
 
 
-            //Diary diary = new Diary();
-            //diary.AddRating(3);
-            //diary.AddRating(5);
-            //diary.AddRating(3.3f);
-            //diary.AddRating(5.9f);
+            Diary diary = new Diary();
+            diary.AddRating(3);
+            diary.AddRating(5);
+            diary.AddRating(3.3f);
+            diary.AddRating(5.9f);
+    
 
-            //Console.WriteLine(Diary.MaxGrade);
-            //Diary diary1 = new Diary();
-            //Diary diary11 = new Diary();
-            //Diary diary111 = new Diary();
-            //Diary diary2 = new Diary();
+            DiaryStatistics stats = diary.ComputeStatistics();
 
-            //Diary diary22 = new Diary();
-
-            //Console.WriteLine(Diary.Count);
-
-            //DiaryStatistics stats = diary.ComputeStatistics();
-            ////var avg = stats.Av
-            //Console.WriteLine("średnia ocena: " + stats.AverageGrade);
-            //Console.WriteLine("MAX ocena: "  + stats.MaxGrade);
-            //Console.WriteLine("Min ocena: " + stats.MinGrade);
-
+            WriteResult("średnia ocena", stats.AverageGrade, 3, 5, 7, 8, 9);
+            WriteResult("MAX ocena" , (int)stats.MaxGrade);
+            WriteResult("Min ocena" , (long)stats.MinGrade);
+            WriteResult("Min ocena" , stats.MinGrade, 1);
 
 
             Console.ReadLine();
+        }
+
+        static void WriteResult(string description, params float[] result)
+        {
+            Console.WriteLine(description + ": " + result[0] + result[4] );
+        }
+
+        static void WriteResult(string description, int result)
+        {
+            Console.WriteLine(description + ": " + result);
+        }
+
+        static void WriteResult(string description, long result)
+        {
+            Console.WriteLine(description + ": " + result);
+        }
+
+        static void WriteResult(string description, long result, string test)
+        {
+            Console.WriteLine($"{description}: {result:F3}: {"test"}: {3}: {4}: {5}");
         }
 
         private static void DziałaniaNaTablicach()

@@ -55,41 +55,41 @@ namespace Projekt10
             return stats;
         }
 
-        ///// <summary>
-        ///// Oblicza średnią z ocen z listy
-        ///// </summary>
-        ///// <returns></returns>
-        //public float CalculateAverage()
-        //{
-        //    float sum = 0;
-        //    float avg = 0;
-        //    foreach (var rating in ratings)
-        //    {
-        //        sum += rating;
-        //    }
+        /// <summary>
+        /// Oblicza średnią z ocen z listy
+        /// </summary>
+        /// <returns></returns>
+        public float CalculateAverage()
+        {
+            float sum = 0;
+            float avg = 0;
+            foreach (var rating in ratings)
+            {
+                sum += rating;
+            }
 
-        //    avg = sum / ratings.Count();
-        //    return avg;
-        //}
+            avg = sum / ratings.Count();
+            return avg;
+        }
 
-        ///// <summary>
-        ///// Metoda zwraca najwyższą ocenę z listy
-        ///// </summary>
-        ///// <returns></returns>
-        //public float GiveMaxRating()
-        //{
+        /// <summary>
+        /// Metoda zwraca najwyższą ocenę z listy
+        /// </summary>
+        /// <returns></returns>
+        public float GiveMaxRating()
+        {
 
-        //    return ratings.Max();
-        //}
+            return ratings.Max();
+        }
 
-        ///// <summary>
-        ///// Metoda zwraca najniższą ocenę z listy
-        ///// </summary>
-        ///// <returns></returns>
-        //public float GiveMinRatin()
-        //{
-        //    return ratings.Min();
-        //}
+        /// <summary>
+        /// Metoda zwraca najniższą ocenę z listy
+        /// </summary>
+        /// <returns></returns>
+        public float GiveMinRatin()
+        {
+            return ratings.Min();
+        }
 
 
     }
