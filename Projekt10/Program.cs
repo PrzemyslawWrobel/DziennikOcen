@@ -41,11 +41,27 @@ namespace Projekt10
             //WriteResult("Min ocena" , (long)stats.MinGrade);
             //WriteResult("Min ocena" , stats.MinGrade, 1);
 
+           
+            // utworzenie delegatów i żeby się nie nadpisały to trzeba z = zmienić na +=
+            diary.NameChanged += new NameChangedDelegate(OnNameChanged);
+            diary.NameChanged += new NameChangedDelegate(OnNameChanged2);
+
             diary.Name = "Dzienniczek Joli";
-            diary.Name = "";
-            diary.Name = null;
+            diary.Name = "No to sruu";
             Console.WriteLine(diary.Name);
             Console.ReadLine();
+        }
+
+        
+
+        private static void OnNameChanged(string existingName, string newName)
+        {
+            Console.WriteLine($"Zmiana mazwy z {existingName} na {newName}" );
+        }
+
+        private static void OnNameChanged2(string existingName, string newName)
+        {
+            Console.WriteLine("***********************");
         }
 
         static void WriteResult(string description, params float[] result)

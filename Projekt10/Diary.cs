@@ -19,7 +19,7 @@ namespace Projekt10
         //stan (zmienne - pola)
         private List<float> ratings;
 
-        private string _name;
+        private string _name = "Dziennik Mai";
         public string Name
         {
             get
@@ -29,10 +29,18 @@ namespace Projekt10
             set
             {
                 if (!string.IsNullOrEmpty(value))
+                {
+                    if (_name != value)
+                    {
+                        NameChanged(_name, value);
+                    }
                     _name = value;
+                }
+                    
             }
         }
-
+        // delegat
+        public NameChangedDelegate NameChanged;
 
         //public static float MinGrade = 0;
         //public static float MaxGrade = 10;
