@@ -4,13 +4,26 @@ namespace FlowControl
 {
     class Program
     {
-        public static int Age;
+        public static int Age=1;
 
         
 
         static void Main(string[] args)
         {
+            // InstructionIf();
 
+            do
+            {
+                Console.WriteLine(Age);
+                Age++;
+                Console.WriteLine(Age);
+            } while (Age<20);
+
+            Console.ReadKey();
+        }
+
+        private static void InstructionIf()
+        {
             Console.WriteLine("Podaj swój wiek: ");
             Age = int.Parse(Console.ReadLine());
             string test = Age > 18 ? "pełnoletni" : "Dziecko";
@@ -35,9 +48,7 @@ namespace FlowControl
             //{
             //    Method4();
             //}
-
-            Console.ReadKey();
-                }
+        }
 
         private static void Method4()
         {
