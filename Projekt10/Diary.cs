@@ -32,7 +32,10 @@ namespace Projekt10
                 {
                     if (_name != value)
                     {
-                        NameChanged(_name, value);
+                        NameChangedEventArgs args = new NameChangedEventArgs();
+                        args.ExistingName = _name;
+                        args.NewName = value;
+                        NameChanged(this, args);
                     }
                     _name = value;
                 }
@@ -40,7 +43,7 @@ namespace Projekt10
             }
         }
         // delegat
-        public NameChangedDelegate NameChanged;
+        public event NameChangedDelegate NameChanged;
 
         //public static float MinGrade = 0;
         //public static float MaxGrade = 10;

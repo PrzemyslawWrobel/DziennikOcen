@@ -45,6 +45,7 @@ namespace Projekt10
             // utworzenie delegatów i żeby się nie nadpisały to trzeba z = zmienić na +=
             diary.NameChanged += new NameChangedDelegate(OnNameChanged);
             diary.NameChanged += new NameChangedDelegate(OnNameChanged2);
+            
 
             diary.Name = "Dzienniczek Joli";
             diary.Name = "No to sruu";
@@ -54,12 +55,12 @@ namespace Projekt10
 
         
 
-        private static void OnNameChanged(string existingName, string newName)
+        private static void OnNameChanged(object sender, NameChangedEventArgs args)
         {
-            Console.WriteLine($"Zmiana mazwy z {existingName} na {newName}" );
+            Console.WriteLine($"Zmiana mazwy z {args.ExistingName} na {args.NewName}" );
         }
 
-        private static void OnNameChanged2(string existingName, string newName)
+        private static void OnNameChanged2(object sender, NameChangedEventArgs args)
         {
             Console.WriteLine("***********************");
         }
