@@ -11,13 +11,18 @@ namespace FlowControl
         static void Main(string[] args)
         {
             // InstructionIf();
-
-            do
+            int[] tab = {1,2,3,4,55,6,55,12,32 };
+            foreach (var item in tab)
             {
-                Console.WriteLine(Age);
-                Age++;
-                Console.WriteLine(Age);
-            } while (Age<20);
+                Console.WriteLine(item);
+            }
+
+            //do
+            //{
+            //    Console.WriteLine(Age);
+            //    Age++;
+            //    Console.WriteLine(Age);
+            //} while (Age<20);
 
             Console.ReadKey();
         }
