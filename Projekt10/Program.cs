@@ -36,12 +36,15 @@ namespace Projekt10
 
             DiaryStatistics stats = diary.ComputeStatistics();
 
-            WriteResult("średnia ocena", stats.AverageGrade, 3, 5, 7, 8, 9);
-            WriteResult("MAX ocena" , (int)stats.MaxGrade);
-            WriteResult("Min ocena" , (long)stats.MinGrade);
-            WriteResult("Min ocena" , stats.MinGrade, 1);
+            //WriteResult("średnia ocena", stats.AverageGrade, 3, 5, 7, 8, 9);
+            //WriteResult("MAX ocena" , (int)stats.MaxGrade);
+            //WriteResult("Min ocena" , (long)stats.MinGrade);
+            //WriteResult("Min ocena" , stats.MinGrade, 1);
 
-
+            diary.Name = "Dzienniczek Joli";
+            diary.Name = "";
+            diary.Name = null;
+            Console.WriteLine(diary.Name);
             Console.ReadLine();
         }
 

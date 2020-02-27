@@ -19,7 +19,20 @@ namespace Projekt10
         //stan (zmienne - pola)
         private List<float> ratings;
 
-        public string Name;
+        private string _name;
+        public string Name
+        {
+            get
+            {
+                return _name.ToUpper();
+            }
+            set
+            {
+                if (!string.IsNullOrEmpty(value))
+                    _name = value;
+            }
+        }
+
 
         //public static float MinGrade = 0;
         //public static float MaxGrade = 10;
